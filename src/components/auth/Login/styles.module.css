@@ -1,0 +1,98 @@
+.loginContainer {
+    display: grid;
+}
+
+@media (min-width: 450px) {
+    .loginContainer {
+        width: 550px;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1199.95px) {
+    /* md breakpoint (MUI default = 900px–1199.95px) */
+    .loginContainer {
+        width: 440px;
+    }
+}
+
+@media (max-width: 599.95px) {
+    /* xs breakpoint (max-width: 600px) */
+    .loginContainer {
+        width: 100%;
+        max-width: 450px;
+    }
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 75px !important;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 900px) and (max-width: 1199.95px) {
+    .formContainer {
+        padding: 40px 40px !important;
+    }
+}
+
+@media (max-width: 599.95px) {
+    .formContainer {
+        padding: 40px !important;
+        margin: 0;
+    }
+}
+
+.forgotPasswordLink {
+    text-decoration: none;
+    color: grey;
+    margin-left: 10px;
+    margin-top: 15px;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+.forgotPasswordLink:hover {
+    color: var(--mui-primary-dark);
+}
+
+.temporaryPasswordChange {
+    height: 500px !important;
+}
+
+.passwordChangeSuccessContainer {
+    width: 100%;
+    text-align: center;
+}
+
+.passwordChangeSuccess {
+    color: #4caf50;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 33px;
+    line-height: 29px;
+}
+
+@media (max-width: 599.95px) {
+    .passwordChangeSuccess {
+        font-size: 14px;
+    }
+}
+
+.passwordChangeSuccessIcon {
+    width: 99px;
+    height: 99px;
+    margin-bottom: 33px;
+    color: var(--mui-primary-main);
+}
+
+.passwordChangeSuccessIcon path {
+    stroke-width: 1.1;
+}
+
+.loginButton {
+    margin-bottom: 50px;
+}

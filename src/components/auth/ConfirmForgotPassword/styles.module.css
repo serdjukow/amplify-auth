@@ -1,0 +1,171 @@
+.title {
+    text-align: center;
+    color: #343333;
+    font-size: 27px;
+    font-weight: 700;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}
+
+.sectionContainer {
+    border-radius: 5px;
+    display: grid;
+    background: white;
+}
+
+@media (min-width: 530px) {
+    .sectionContainer {
+        width: 530px;
+    }
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@media (max-width: 600px) {
+    .formContainer {
+        margin: 0;
+    }
+}
+
+.buttonsContainer {
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 99px;
+}
+
+.codeSend {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 33px;
+    color: #282835;
+    line-height: 29px;
+}
+
+@media (max-width: 600px) {
+    .codeSend {
+        font-size: 14px;
+    }
+}
+
+.checkSpamTitle {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #282835;
+    line-height: 29px;
+}
+
+.checkSpam {
+    margin-bottom: 33px;
+}
+
+@media (max-width: 600px) {
+    .checkSpam {
+        font-size: 14px;
+    }
+}
+
+.iconTextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 33px;
+}
+
+.icon {
+    width: 50px;
+    margin-bottom: 7px;
+    color: #5b5b5b;
+}
+
+.iconTextContainer:not(:last-child) {
+    margin-right: 70px;
+}
+
+@media (max-width: 600px) {
+    .iconTextContainer:not(:last-child) {
+        margin-right: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .iconTextContainer:not(:last-child) {
+        margin-right: 12px;
+    }
+}
+
+.icon {
+    width: 50px;
+    margin-bottom: 7px;
+    color: #5b5b5b;
+}
+
+.iconText {
+    color: #7d7d7d;
+}
+
+@media (max-width: 600px) {
+    .iconText {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+    .iconText {
+        font-size: 12px;
+    }
+}
+
+.passwordChangeSuccessContainer {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 99px;
+}
+
+.passwordChangeSuccess {
+    color: #4caf50;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 33px;
+    line-height: 29px;
+}
+
+@media (max-width: 600px) {
+    .passwordChangeSuccess {
+        font-size: 14px;
+    }
+}
+
+.passwordChangeSuccessIcon {
+    width: 99px;
+    height: 99px;
+    margin-bottom: 33px;
+    color: var(--mui-primary-color);
+}
+
+.resendCodeContainer {
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.resendCodeLink {
+    text-decoration: none;
+    color: grey;
+    transition: color 0.2s ease;
+}
+
+.resendCodeLink:hover {
+    color: var(--mui-primary-color);
+}

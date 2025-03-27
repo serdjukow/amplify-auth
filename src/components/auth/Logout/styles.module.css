@@ -1,0 +1,12 @@
+.content {
+  padding-top: 32px; /* theme.spacing(4) = 4 * 8px */
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  margin-bottom: 24px; /* theme.spacing(3) = 3 * 8px */
+}
