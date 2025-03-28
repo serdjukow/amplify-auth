@@ -1,6 +1,3 @@
-import { GlobalSettings } from "./GlobalSettings.types";
-import { User } from "./User.types";
-
 export type CurrentData = {
   id: string;
   name: string;
@@ -31,8 +28,8 @@ export type AuthDataProps = {
   isLoading: boolean;
   isAuth: boolean;
   cognitoUser: CurrentCognitoUserType | null;
-  userData: User | null;
-  globalSettings: GlobalSettings | null;
+  // userData: User | null;
+  // globalSettings: GlobalSettings | null;
 };
 
 export type LoginErrorType = {

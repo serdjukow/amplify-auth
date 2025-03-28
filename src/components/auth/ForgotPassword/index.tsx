@@ -18,7 +18,7 @@ const ForgotPassword: FC = () => {
 
     const [userName, setUsername] = useState<string>("")
     const [loading, setLoading] = useState<boolean>(false)
-    const [success, setSuccess] = useState<boolean>(true)
+    const [, setSuccess] = useState<boolean>(true)
 
     const resetPasswordRequest = async () => {
         try {

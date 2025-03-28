@@ -1,6 +1,3 @@
-// import { AuthLayout } from "@/layout"
-
-import { minHeight } from "@mui/system"
 
 export default function RootLayout({
     children,

@@ -1,6 +1,6 @@
 "use client"
 
-import { FC, useRef, useState } from "react"
+import { FC, useState } from "react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
 import { Grid, TextField, Typography } from "@mui/material"
@@ -25,10 +25,8 @@ const ChangeTemporaryPassword: FC = () => {
     const [password, setPassword] = useState<string>("")
     const [confirmedPassword, setConfirmPassword] = useState<string>("")
     const [loading, setLoading] = useState<boolean>(false)
-    const [success, setSuccess] = useState<boolean>(true)
+    const [, setSuccess] = useState<boolean>(true)
     const [changePasswordSuccess, setChangePasswordSuccess] = useState<boolean>(false)
-
-    const errorRef = useRef<HTMLElement>(null)
 
     const tryChangePassword = async () => {
         try {
@@ -73,9 +71,7 @@ const ChangeTemporaryPassword: FC = () => {
             const error = err as LoginErrorType
 
             if (error?.code === "UserNotFoundException") {
-                notify(
-                    "Die angegebene E-Mail-Adresse wurde leider nicht gefunden. Bitte überprüfe deine Eingabe oder kontaktiere den Support!"
-                )
+                notify("Die angegebene E-Mail-Adresse wurde leider nicht gefunden. Bitte überprüfe deine Eingabe oder kontaktiere den Support!")
             } else if (error?.code === "CodeMismatchException") {
                 notify("Das angegebene temporäre Passwort stimmt nicht mit dem dir gesendeten Passwort überein!")
             } else {
@@ -133,25 +129,10 @@ const ChangeTemporaryPassword: FC = () => {
                 <Grid justifyContent="center" alignItems="center" container direction="column">
                     <div className={styles.sectionContainer}>
                         <div className={styles.formContainer}>
-                            <TextField
-                                label="Temporäres Passwort"
-                                value={temporaryPassword}
-                                onChange={(e) => setTemporaryPassword(e.target.value)}
-                                type="text"
-                            />
+                            <TextField label="Temporäres Passwort" value={temporaryPassword} onChange={(e) => setTemporaryPassword(e.target.value)} type="text" />
                             <TextField label="E-Mail-Adresse" value={userName} onChange={(e) => setUsername(e.target.value)} type="text" />
-                            <TextField
-                                label="Neues Passwort"
-                                value={password}
-                                onChange={(e) => setPassword(e.target.value)}
-                                type="password"
-                            />
-                            <TextField
-                                label="Neues Passwort wiederholen"
-                                value={confirmedPassword}
-                                onChange={(e) => setConfirmPassword(e.target.value)}
-                                type="password"
-                            />
+                            <TextField label="Neues Passwort" value={password} onChange={(e) => setPassword(e.target.value)} type="password" />
+                            <TextField label="Neues Passwort wiederholen" value={confirmedPassword} onChange={(e) => setConfirmPassword(e.target.value)} type="password" />
                         </div>
                     </div>
                     <Grid justifyContent="center" alignItems="center" container direction="column" className={styles.buttonsContainer}>
@@ -168,25 +149,14 @@ const ChangeTemporaryPassword: FC = () => {
             )}
 
             {changePasswordSuccess && (
-                <Grid
-                    justifyContent="center"
-                    alignItems="center"
-                    container
-                    direction="column"
-                    className={styles.passwordChangeSuccessContainer}
-                >
+                <Grid justifyContent="center" alignItems="center" container direction="column" className={styles.passwordChangeSuccessContainer}>
                     <CheckCircleIcon className={styles.passwordChangeSuccessIcon} />
                     <Typography className={styles.passwordChangeSuccess}>
                         Dein Passwort wurde erfolgreich geändert!
                         <br />
                         Wechsle nun zum Login-Fenster, um dich mit den neuen Zugangsdaten einzuloggen.
                     </Typography>
-                    <LoadingButton
-                        sx={{ px: "25px" }}
-                        variant="contained"
-                        onClick={() => router.push(AuthRoutes.login)}
-                        loading={loading}
-                    >
+                    <LoadingButton sx={{ px: "25px" }} variant="contained" onClick={() => router.push(AuthRoutes.login)} loading={loading}>
                         Jetzt Einloggen
                     </LoadingButton>
                 </Grid>
