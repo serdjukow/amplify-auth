@@ -1,4 +1,4 @@
-"use client"
+export const dynamic = "force-dynamic"
 
 import Logout from "@/components/auth/Logout"
 
